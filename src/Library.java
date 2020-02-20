@@ -1,16 +1,16 @@
 import java.util.Arrays;
 
 public class Library {
-    private Book[] bookList;
+    private List<Book> bookList;
     private int signUpTime;
     private int scannedBooks;
     private int possiblePoints;
     private boolean visited;
+    private int booksSize;
     private PriorityQueue<Book> pq = new PriorityQueue<>();
 
-    public Library(Book[] bookList, int signUpTime, int scannedBooks) {
-        Arrays.sort(bookList);
-        this.bookList = bookList;
+    public Library(int signUpTime, int scannedBooks) {
+        boolList = new ArrayList<>();
         this.signUpTime = signUpTime;
         this.scannedBooks = scannedBooks;
         possiblePoints = 0;
@@ -25,11 +25,11 @@ public class Library {
         possiblePoints = 0;
     }
 
-    public Book[] getBookList() {
+    public List<Book> getBookList() {
         return bookList;
     }
 
-    public void setBookList(Book[] bookList) {
+    public void setBookList(List<Book> bookList) {
         this.bookList = bookList;
     }
 
@@ -64,4 +64,9 @@ public class Library {
     public void setVisited(boolean visited) {
         this.visited = visited;
     }
+
+    public boolean addBook(Book book) {
+        return bookList.add(book);
+    }
+
 }
