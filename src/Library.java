@@ -5,8 +5,18 @@ public class Library {
     private int signUpTime;
     private int scannedBooks;
     private int possiblePoints;
+    private boolean visited;
 
     public Library(Book[] bookList, int signUpTime, int scannedBooks) {
+        Arrays.sort(bookList);
+        this.bookList = bookList;
+        this.signUpTime = signUpTime;
+        this.scannedBooks = scannedBooks;
+        possiblePoints = 0;
+        visited = false;
+    }
+
+    public Library(int signUpTime, int scannedBooks) {
         Arrays.sort(bookList);
         this.bookList = bookList;
         this.signUpTime = signUpTime;
@@ -44,5 +54,13 @@ public class Library {
 
     public void setPossiblePoints(int possiblePoints) {
         this.possiblePoints = possiblePoints;
+    }
+
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited(boolean visited) {
+        this.visited = visited;
     }
 }
