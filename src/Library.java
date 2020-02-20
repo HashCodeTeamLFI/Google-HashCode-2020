@@ -6,6 +6,7 @@ public class Library {
     private int scannedBooks;
     private int possiblePoints;
     private boolean visited;
+    private PriorityQueue<Book> pq = new PriorityQueue<>();
 
     public Library(Book[] bookList, int signUpTime, int scannedBooks) {
         Arrays.sort(bookList);
