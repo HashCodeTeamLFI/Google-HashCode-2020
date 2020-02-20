@@ -1,19 +1,19 @@
 public class Library {
-    private List<Book> bookList;
+    private Book[] bookList;
     private int signUpTime;
     private int scannedBooks;
 
-    public Library(List<Book> bookList, int signUpTime, int scannedBooks) {
+    public Library(Book[] bookList, int signUpTime, int scannedBooks) {
         this.bookList = bookList;
         this.signUpTime = signUpTime;
         this.scannedBooks = scannedBooks;
     }
 
-    public List<Book> getBookList() {
+    public Book[] getBookList() {
         return bookList;
     }
 
-    public void setBookList(List<Book> bookList) {
+    public void setBookList(Book[] bookList) {
         this.bookList = bookList;
     }
 
